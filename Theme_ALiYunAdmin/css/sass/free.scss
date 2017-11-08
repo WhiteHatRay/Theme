@@ -1,0 +1,131 @@
+/**
+ * 仿阿里云后台Tradition布局v1.0
+ */
+@import "variables.scss";
+html, body{
+    height: 100%;
+    margin: 0;
+}
+.container{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    z-index: 100;
+    background: $color-similar;
+    color: $color-menu-text;
+}
+.brand{
+    margin-left: $brand-margin-left;
+    display: inline-box;
+    float: left; 
+    padding: $header-padding;
+}
+.brand-img{
+    float: left;
+    width: $brand-img-height;
+}
+.brand-name{
+    float: left;
+    display: inline;
+    margin: $header-name-margin;
+}
+.left-container{
+    position: fixed;
+    width: $menu-width;
+    background: $color-primary;
+    top: $header-height;
+    bottom: 0;
+    overflow: auto;
+    z-index: 99;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+.right-container{
+    position: absolute;
+    padding-top: $header-height;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: $menu-width;
+}
+.right-container-large{
+    left: $menu-onlyicon-width;
+}
+.menu-row{
+    color: $color-menu-text;
+    padding: $menu-padding;
+    cursor: pointer;
+    &:hover{
+        background: $color-primary-light;
+        i{
+            color: $color-menu-text;
+        }
+    }
+    a{
+        color: $color-menu-text;
+        text-decoration: none;
+    }
+    i{
+        color: $color-primary-light2;
+    }
+}
+.menu-stretch{
+    color: $color-primary-light2;
+    text-align: center;
+    padding: $usual-padding;
+    cursor: pointer;
+    background: $color-primary-light;
+    &:hover{
+        color: $color-menu-text;
+    }
+}
+.menu-list{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    li{
+        padding: $menu-list-padding;
+        background: $color-accent-light;
+        &:hover{
+            background: $color-accent;
+        }
+        a{
+            color: $color-menu-text;
+            text-decoration: none;
+        }
+    }
+}
+
+.menu-onlyicon{
+    width: $menu-onlyicon-width;
+    .menu-row, .menu-list li{
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    .menu-text{
+        display: none;
+    }
+}
+
+.show-off{
+    display: none;
+}
+footer{
+    background: $color-similar;
+    padding: $footer-padding;
+    color: $color-menu-text;
+}
+.content-container{
+    min-height: 100%;
+    margin-bottom: -1*$footer-height - 1;
+}
